@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>807728781460-vb15tvtck3p0j0g47222llqfp36rid36.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.807728781460-vb15tvtck3p0j0g47222llqfp36rid36</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAvI6P48y_UFUGknsR-6skvlWX8ioZ8YHM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>807728781460</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>centennialCollege.TODOFireBase</string>
+	<key>PROJECT_ID</key>
+	<string>todo-ios-c17e2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>todo-ios-c17e2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:807728781460:ios:162f9bbba3acb96c4f7c81</string>
+	<key>DATABASE_URL</key>
+	<string>https://todo-ios-c17e2.firebaseio.com</string>
+</dict>
+</plist>

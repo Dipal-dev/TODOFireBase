@@ -15,21 +15,15 @@ class TodoViewController: UIViewController {
     @IBOutlet weak var todoTitle: UITextField!
     @IBOutlet weak var todoDate: UIDatePicker!
     @IBOutlet weak var todoMessage: UITextView!
+    @IBOutlet weak var errorStatus: UITextField!
     var todo:Todo?
+    var validation = Validation()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if self.todo != nil {
-            todoTitle.text = self.todo?.name
-            todoMessage.text = self.todo?.message
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
-            let date = dateFormatter.date(from: self.todo!.reminderDate!)
-            todoDate.date = date!
-        }
-        // Do any additional setup after loading the view.
+    
     }
     
 
@@ -37,6 +31,34 @@ class TodoViewController: UIViewController {
         if todo == nil {
             todo = Todo()
         }
+        //Validate text fields
+        
+        let isTitleEmpty = self.validation.validateStringEmpty(name: todoTitle.text!)
+        let isMessageEmpty = self.validation.validateStringEmpty(name: todoMessage.text!)
+        let isTitleValid = self.validation.validateTitle(name: todoTitle.text!)
+        let isMessageValid = self.validation.validateMessage(name: todoTitle.text!)
+        
+        if(isTitleEmpty == true && isMessageEmpty == true){
+            self.errorStatus.text = "Title and Message can't be empty"
+            return
+        }else if (isTitleEmpty == true) {
+            self.errorStatus.text = "Title can't be empty"
+            return
+        }else if(isMessageEmpty == true){
+            self.errorStatus.text = "Message can't be empty"
+            return
+        } else if(isTitleValid == false){
+            self.errorStatus.text = "Title can only be 25 character long."
+            return
+        }else if(isMessageValid == false){
+            self.errorStatus.text = "Message can only be 200 character long."
+            return
+        }else {
+            self.errorStatus.text = ""
+        }
+        
+        
+        
         
         // first section
         let dateFormatter = DateFormatter()
@@ -52,9 +74,11 @@ class TodoViewController: UIViewController {
         
         let dictionaryTodo = [ "name"    : todo!.name! ,
                                "message" : todo!.message!,
-                               "date"    : todo!.reminderDate!]
+                               "date"    : todo!.reminderDate!,
+                               "status"  : todo!.completed!]
+
         
-        let childUpdates = ["/todoList/\(key)": dictionaryTodo]
+        let childUpdates = ["/todoList/\(key!)": dictionaryTodo]
         ref.updateChildValues(childUpdates, withCompletionBlock: { (error, ref) -> Void in
             self.navigationController?.popViewController(animated: true)
         })

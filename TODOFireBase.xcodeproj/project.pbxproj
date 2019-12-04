@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6AA2322398322C00A83D3A /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6AA2312398322C00A83D3A /* Validation.swift */; };
 		8E8D18C7238EFA0C0068ED39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D18C6238EFA0C0068ED39 /* AppDelegate.swift */; };
 		8E8D18C9238EFA0C0068ED39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D18C8238EFA0C0068ED39 /* ViewController.swift */; };
 		8E8D18CC238EFA0C0068ED39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8D18CA238EFA0C0068ED39 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		52CD9478181893CC3EF76F94 /* Pods-TODOFireBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODOFireBase.release.xcconfig"; path = "Target Support Files/Pods-TODOFireBase/Pods-TODOFireBase.release.xcconfig"; sourceTree = "<group>"; };
+		8E6AA2312398322C00A83D3A /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		8E8D18C3238EFA0C0068ED39 /* TODOFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TODOFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8D18C6238EFA0C0068ED39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E8D18C8238EFA0C0068ED39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				8E8D18DC238F03860068ED39 /* TodoViewController.swift */,
 				8E8D18DE238F068D0068ED39 /* ToDo.swift */,
 				8EF1C651239748D8000623E1 /* UpdateViewController.swift */,
+				8E6AA2312398322C00A83D3A /* Validation.swift */,
 			);
 			path = TODOFireBase;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				8E8D18DD238F03860068ED39 /* TodoViewController.swift in Sources */,
 				8E8D18C7238EFA0C0068ED39 /* AppDelegate.swift in Sources */,
 				8E8D18DF238F068D0068ED39 /* ToDo.swift in Sources */,
+				8E6AA2322398322C00A83D3A /* Validation.swift in Sources */,
 				8EF1C652239748D8000623E1 /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,5 +15,5 @@ class Todo: NSObject {
     var name :String?
     var message: String?
     var reminderDate: String?
-    var completed:Bool?
+    var completed:String? = "false"
 }

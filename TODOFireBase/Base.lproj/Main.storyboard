@@ -75,8 +75,9 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC9-PA-xgC">
-                                <rect key="frame" x="190" y="632" width="34" height="30"/>
+                                <rect key="frame" x="188" y="632" width="42" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveData:" destination="Wqj-rz-tHh" eventType="touchUpInside" id="e0O-jZ-wqg"/>
@@ -111,11 +112,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LU-r0-jdl">
+                                <rect key="frame" x="20" y="588" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.21256572449694888" blue="0.19062045843806341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5lR-zZ-bv6"/>
                     </view>
                     <connections>
+                        <outlet property="errorStatus" destination="2LU-r0-jdl" id="LDO-Xo-h5P"/>
                         <outlet property="todoDate" destination="9Z8-Cd-PS2" id="pom-pD-uP8"/>
                         <outlet property="todoMessage" destination="iLO-qQ-dtK" id="XoO-Gh-sP1"/>
                         <outlet property="todoTitle" destination="FL7-JI-BDI" id="Cev-uB-Fgx"/>
@@ -155,11 +164,13 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1a-FI-j1c">
-                                <rect key="frame" x="190" y="606" width="34" height="30"/>
+                                <rect key="frame" x="178" y="605" width="65" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="saveData:" destination="Wqj-rz-tHh" eventType="touchUpInside" id="7Gr-AV-cgx"/>
+                                    <action selector="updateData:" destination="yN7-D0-6OL" eventType="touchUpInside" id="El6-NH-3kR"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrO-A8-0gQ">
@@ -184,14 +195,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-Jn-FdZ">
+                                <rect key="frame" x="20" y="547" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.2125657245" blue="0.1906204584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="44X-nQ-FfT"/>
                     </view>
+                    <connections>
+                        <outlet property="errorStatus" destination="Ezp-Jn-FdZ" id="qoE-mT-qgY"/>
+                        <outlet property="todoDate" destination="i8Z-D5-bQj" id="Tfn-UA-t33"/>
+                        <outlet property="todoMessage" destination="y3n-Jf-p7v" id="7sm-72-Xu7"/>
+                        <outlet property="todoTitle" destination="SrO-A8-0gQ" id="cwN-Ra-T5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svk-mr-00z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="129"/>
+            <point key="canvasLocation" x="857.97101449275374" y="128.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="USo-GO-mmS">

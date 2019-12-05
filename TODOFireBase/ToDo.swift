@@ -1,9 +1,11 @@
 //
-//  ToDo.swift
-//  TODOFireBase
-//
-//  Created by Dipal Patel on 2019-11-27.
+//  File Name: ToDo.swift
+//  App name: TODOFireBase
+//  Student ID: 301090880
+//  Author's name: Dipal Patel on 2019-11-27.
+//  File Description: Main ViewController which list all todo's
 //  Copyright © 2019 Dipal Patel. All rights reserved.
+//
 //
 
 import Foundation

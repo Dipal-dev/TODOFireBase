@@ -1,8 +1,9 @@
 //
-//  TodoViewController.swift
-//  TODOFireBase
-//
-//  Created by Dipal Patel on 2019-11-27.
+//  File Name: ToDoViewController.swift
+//  App name: TODOFireBase
+//  Student ID: 301090880
+//  Author's name: Dipal Patel on 2019-11-27.
+//  File Description: Main ViewController which list all todo's
 //  Copyright © 2019 Dipal Patel. All rights reserved.
 //
 
@@ -11,7 +12,7 @@ import Firebase
 
 class TodoViewController: UIViewController {
     
-    
+    //attributes
     @IBOutlet weak var todoTitle: UITextField!
     @IBOutlet weak var todoDate: UIDatePicker!
     @IBOutlet weak var todoMessage: UITextView!
@@ -22,11 +23,14 @@ class TodoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
     }
     
-
+    //cancel button
+    @IBAction func cancel(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    //save data to realtime firebase database after validating the data
     @IBAction func saveData(_ sender: Any) {
         if todo == nil {
             todo = Todo()
